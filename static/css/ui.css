@@ -450,7 +450,7 @@ p:last-child {
   color: #343a40;
 }
 .widget-header a:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 .widget-header i {
   color: #969696;
@@ -467,7 +467,7 @@ p:last-child {
   right: -10px;
 }
 .widget-header:hover i {
-  color: #3167eb;
+  color: #31eb9e;
 }
 
 /* desktop only */
@@ -480,7 +480,7 @@ p:last-child {
   color: inherit;
 }
 .section-footer ul a:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 .section-footer .logo-footer {
   height: 40px;
@@ -640,7 +640,7 @@ p:last-child {
   color: #212529;
 }
 .itemside a.title:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 
 a.itemside {
@@ -782,7 +782,7 @@ ul.row, ul.row-sm {
 }
 .list-normal li:before {
   content: "•";
-  color: #3167eb;
+  color: #31eb9e;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -800,7 +800,7 @@ ul.row, ul.row-sm {
   color: #343a40;
 }
 .list-menu a:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 
 .cols-two {
@@ -823,7 +823,7 @@ a[class*=card] {
   color: initial;
 }
 a[class*=card]:hover .title {
-  color: #3167eb;
+  color: #31eb9e;
 }
 
 /* BASE STYLE FOR PRODUCT ITEM */
@@ -832,7 +832,7 @@ a[class*=card]:hover .title {
   display: block;
 }
 [class*=card-product] a.title:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 [class*=card-product] .badge {
   top: 10px;
@@ -884,7 +884,7 @@ a[class*=card]:hover .title {
   color: #ccc;
 }
 .card-product-grid .topbar a:hover {
-  color: #3167eb;
+  color: #31eb9e;
 }
 .card-product-grid .fix-height {
   height: 80px;
@@ -1187,7 +1187,7 @@ a[class*=card]:hover .title {
   margin-top: 7px;
 }
 .tracking-wrap .step.active .icon {
-  background: #3167eb;
+  background: #31eb9e;
   color: #fff;
 }
 .tracking-wrap .step.active .text {
@@ -1195,7 +1195,7 @@ a[class*=card]:hover .title {
   color: #000;
 }
 .tracking-wrap .step.active:before {
-  background: #3167eb;
+  background: #31eb9e;
 }
 
 .menu-category {
@@ -1304,8 +1304,8 @@ a[class*=card]:hover .title {
   opacity: 0;
 }
 .btn-check input:checked ~ .btn {
-  border-color: #3167eb;
-  background-color: #3167eb;
+  border-color: #31eb9e;
+  background-color: #31eb9e;
   color: #fff;
 }
 .btn-check:hover:not(.active) {
@@ -1324,7 +1324,7 @@ a[class*=card]:hover .title {
   left: 18px;
 }
 .js-check.active {
-  border-color: #3167eb;
+  border-color: #31eb9e;
 }
 .js-check:hover:not(.active) {
   border-color: #ccc;

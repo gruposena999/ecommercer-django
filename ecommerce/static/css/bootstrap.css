@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --blue: #3167eb;
+  --blue: #31eb9e;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -57,7 +57,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #A2D9CE ;
+  color: #212529;
   text-align: left;
   background-color: #fff;
 }
@@ -152,12 +152,12 @@ sup {
 }
 
 a {
-  color: #3167eb;
+  color: #31eb9e;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #1244bd;
+  color: #31cceb;
   text-decoration: underline;
 }
 
@@ -2377,13 +2377,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3167eb;
-  border-color: #3167eb;
+  background-color: #31eb9e;
+  border-color: #31eb9e;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #1650e0;
-  border-color: #154cd4;
+  background-color: #31cceb;
+  border-color: #31cceb;
 }
 .btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(80, 126, 238, 0.5);
@@ -2431,8 +2431,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #00b517;
-  border-color: #00b517;
+  background-color: #31eb9e;
+  border-color: #31eb9e;
 }
 .btn-success:hover {
   color: #fff;
@@ -2673,13 +2673,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #3167eb;
-  border-color: #3167eb;
+  color: #fff;
+  border-color: #31eb9e;
+  background-color: #31eb9e;
 }
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #3167eb;
-  border-color: #3167eb;
+  background-color: #31eb9e;
+  border-color: #31eb9e;
 }
 .btn-outline-primary:focus, .btn-outline-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(49, 103, 235, 0.5);
@@ -4593,7 +4594,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #3167eb;
+  color: #31eb9e;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
@@ -4622,8 +4623,8 @@ input[type=button].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #3167eb;
-  border-color: #3167eb;
+  background-color: #31eb9e;
+  border-color: #31eb9e;
 }
 .page-item.disabled .page-link {
   color: #545454;
