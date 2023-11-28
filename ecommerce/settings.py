@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-ap!#^e^6j-s8drt-jexi50*k7nepr(__x@j(-fzqo0dova6!#0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000']
+
+#'postman_domain'
 
 
 # Application definition
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +55,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.MiMiddlewarePersonalizado',
 ]
+
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_NAME = "csrftoken"
+CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
 
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -82,10 +91,15 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_ecommerce',
+        'USER': 'rodrigo',
+        'PASSWORD': 'rorro13',
+        'HOST': 'localhost',  # Puedes cambiar esto según tu configuración de MySQL.
+        'PORT': '3307',            # Deja esto en blanco para usar el puerto predeterminado.
     }
 }
+
 
 
 # Password validation
@@ -130,11 +144,19 @@ STATICFILES_DIRS = [
     'ecommerce/static'
 ]
 
-MEDIA_URL = '/media/'
-STATIC_ROOT = BASE_DIR /'media'
+#MEDIA_URL = '/media/'
+#STATIC_ROOT = BASE_DIR /'media'
 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR : 'danger'
+}
 
-
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gruposena999@gmail.com'
+EMAIL_HOST_PASSWORD = 'edttteabfzzwtmzo'
+EMAIL_USE_TLS= True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

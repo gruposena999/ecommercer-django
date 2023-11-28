@@ -1,6 +1,7 @@
 {% load static %}
 
 <header class="section-header">
+<!----><!--
 <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,13 +25,17 @@
 </div> <!-- container //  -->
 </nav>
 
+
 <section class="header-main border-bottom">
   <div class="container">
 <div class="row align-items-center">
   <div class="col-lg-2 col-md-3 col-6">
     <a href="{% url 'home' %}" class="brand-wrap"><!-- logo -->
-      <img class="logo" src="{% static './images/logo04.png'%}">
+    <a class="logotext" href="{% url 'home' %}">E-KOMM</a>
+
+      <!--<img class="logo" src="{% static './images/logo04.png'%}">
     </a> <!-- brand-wrap.// -->
+
   </div>
   <div class="col-lg col-sm col-md col-6 flex-grow-0">
     <div class="category-wrap dropdown d-inline-block float-right">
@@ -48,7 +53,8 @@
   <a href="{% url 'store' %}" class="btn btn-outline-primary">Tienda</a>
   <div class="col-lg  col-md-6 col-sm-12 col">
 
-    <form action="{% url 'search' %}" class="search">
+    <form action="{% url 'search' %}" class="POST">
+      {% csrf_token %}
       <div class="input-group w-100">
           <input type="text" class="form-control" style="width:60%;" placeholder="Buscar Productos" name="keyword">
 
@@ -62,15 +68,28 @@
   </div> <!-- col.// -->
   <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
         <div class="d-flex justify-content-end mb-3 mb-lg-0">
+
+          {% if user.id is None %}
           <div class="widget-header">
-            <small class="title text-muted">Bienvenido visitante!</small>
+            <small class="title text-muted">Bienvenido</small>
             <div>
-              <a href="./signin.html">Login</a> <span class="dark-transp"> | </span>
-              <a href="./register.html"> Registrar</a>
+              <a class="blanco" href="{% url 'login' %}"> <i class="fa fa-regular fa-user" style="color: #f9d923;"></i> Login</a> <span class="dark-transp"  style="color: #fff;"> | </span>
+              <a class="blanco" href="{% url 'register' %}"><i class="fa fa-solid fa-user-plus" style="color: #f9d923;";"></i>  Register</a>
             </div>
           </div>
+          {% else %}
+
+          <div class="widget-header">
+            <small class="title text-muted">Bienvenido {{user.first_name}}!</small>
+            <div>
+              <a class="blanco" href="#"> <i class="fa fa-regular fa-user" style="color: #f9d923;"></i> Dashboard</a> <span class="dark-transp"  style="color: #fff;"> | </span>
+              <a class="blanco" href="{% url 'logout' %}"><i class="fa fa-solid fa-user-plus" style="color: #f9d923;";"></i>  Salir</a>
+            </div>
+          </div>
+
+          {% endif %}
           <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
-            <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+            <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart" style="color: #f9d923;"></i></div>
             <span class="badge badge-pill badge-danger notify">{{ cart_count }}</span>
           </a>
         </div> <!-- widgets-wrap.// -->

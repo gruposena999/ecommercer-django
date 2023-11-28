@@ -5,6 +5,13 @@ from carts.models import CartItem
 from carts.views import _cart_id
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
+from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
+
+#from django.views.decorators.http import require_POST
+
+@csrf_protect
+#@require_POST
 # Create your views here.
 def store(request, category_slug=None):
     categories = None
@@ -20,7 +27,7 @@ def store(request, category_slug=None):
     else:
         products = Product.objects.all().filter(is_available=True).order_by('id')
         paginator = Paginator(products, 6)
-        page = request.GET.get('page')
+        page = request.GET.get('page')#############################
         paged_products = paginator.get_page(page)
         product_count = products.count()
 
